@@ -1,0 +1,34 @@
+class Solution {
+    public int[] twoSum(int[] nums, int target) {
+        for(i=0;i<=nums[].length-1;i++){
+            for(j=i+1;j<=nums[].length;j++){
+                int a=i+j;
+                if(a==target){
+                    int []answer;
+                    answer[0]=i
+                    answer[1]=j
+
+                    return answer
+                }
+            }
+        }
+    }
+}
+
+
+### LC #1 sum of Two numbers
+class Solution {
+public:
+    vector<int> twoSum(vector<int>& nums, int target) {
+        std::unordered_map<int, int> hashtable;
+        for (int i = 0; i < nums.size(); ++i){
+            auto it = hashtable.find(target - nums[i]);
+            if (it != hashtable.end()){
+                return {it -> second, i};
+            }
+            hashtable[nums[i]] = i;
+        }
+        return {};// resolving compiler confilct 
+    }
+};
+// uses hashtable to solve problem
